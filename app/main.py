@@ -18,9 +18,8 @@ def read_root():
             <title>ADSI Project 2</title>
         </head>
         <body>
-            <h1>Objective</h1><br>
+            <h1>Objective</h1>
             <p>OBJECTIVE: deploy a machine learning model into  Heroku webapp as a production environment that could predict the type of beer accurately based on inputs.</p>
-            
             <h1>Endpoints</h1>
             <p>root = / <br>
             healthcheck = /health <br>
@@ -56,7 +55,7 @@ def format_features(Brewery_Name: str, Review_Aroma: float, Review_Appearance: f
         'Review Taste': [Review_Taste]
     }
 
-@app.get("/beer/type/")
+@app.post("/beer/type/")
 def predict(Brewery_Name: str, Review_Aroma: float, Review_Appearance: float, Review_Palate: float, Review_Taste: float):
     features = format_features(Brewery_Name, Review_Aroma, Review_Appearance, Review_Palate, Review_Taste)
     obs = pd.DataFrame(features)
@@ -71,6 +70,7 @@ def arch():
             <head>
                 <title>Model Architecture</title>
             </head>
+            <h1>Model Architecture</h1>
             <body>
                 PytorchMultiClass( <br>
                 (layer_1): Linear(in_features=8, out_features=32, bias=True) <br>
