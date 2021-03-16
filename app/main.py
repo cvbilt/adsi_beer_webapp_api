@@ -18,8 +18,9 @@ def read_root():
             <title>ADSI Project 2</title>
         </head>
         <body>
+            <h1>Welcome to the Beer App</h1>
             <h1>Objective</h1>
-            <p>OBJECTIVE: deploy a machine learning model into  Heroku webapp as a production environment that could predict the type of beer accurately based on inputs.</p>
+            <p>To deploy a machine learning model into  Heroku webapp as a production environment that could predict the type of beer accurately based on inputs.</p>
             <h1>Endpoints</h1>
             <p>root = / <br>
             healthcheck = /health <br>
@@ -36,7 +37,8 @@ def read_root():
             </p>
             
             <h1>Link to Github Repo</h1>
-            
+            Modelling repo =  https://github.com/cvbilt/adsi_beer_webapp<br>
+            API deployment repo = https://github.com/cvbilt/adsi_beer_webapp_api
         </body>
     </html>
     """
